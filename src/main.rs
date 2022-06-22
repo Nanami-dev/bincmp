@@ -10,7 +10,7 @@ use colored::Colorize;
 #[clap(
     name = "bincmp",
     author = "Akihiro Saiki <misly.lx00@gmail.com>",
-    version = "0.0.1",
+    version = "0.1.0",
     about = "Binary compare app."
 )]
 struct AppArgs {
@@ -48,8 +48,6 @@ fn cmp_buffer(buf1: &Vec<u8>, buf2: &Vec<u8>, offset: u64, len: u64) -> Option<u
 fn main() {
     /* Parse commandline arguments */
     let args: AppArgs = AppArgs::parse();
-
-    println!("bincmp v0.0.1 by Nanamiiiii\n");
 
     let base_name = args.base;
     let target_name = args.target;
